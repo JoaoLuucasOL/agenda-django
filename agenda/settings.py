@@ -89,7 +89,7 @@ DATABASES = {
         'USER': 'cursopython',
         'PASSWORD': 'curs0Pyth0n@169',
         'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
-	'PORT': '3306',
+        'PORT': '3306',
     }
 }
 
@@ -155,3 +155,8 @@ MESSAGE_TAGS = {
     constants.SUCCESS: 'alert-success',
     constants.INFO: 'alert-info',
 }
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
